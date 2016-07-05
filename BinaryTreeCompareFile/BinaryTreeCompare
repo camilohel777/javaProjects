@@ -71,6 +71,7 @@ public class BinaryTreeCompare {
     //If one is empty and one is not, or if different values then return false
       else
       {
+		  System.out.println("These trees are not similar");
           return false;  
       }
       
