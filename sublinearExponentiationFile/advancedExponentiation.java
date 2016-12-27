@@ -10,7 +10,6 @@ public class SubLinearExp {
         System.out.println("Total amount of multiplications performed = "+ counter);
     }
     
-    
      public static long exponentiation(long x, int n)
      {
         
@@ -18,20 +17,22 @@ public class SubLinearExp {
         { //Finished exponent
             return 1;
         }
-        else if(n % 2 == 0)
-        { 
-            //if n is even
-            counter++;
-            return exponentiation(x * x, n/2);
-        }
-        else     
+        else
         {
-            //If n is odd
-            counter++;
-            return x * exponentiation(x * x, (n-1)/2);
-        }
-        
-        
+            counter+=1;
+            long half = exponentiation(x, n/2);
+            
+            if(n % 2 == 0)
+            { 
+                //if n is even
+                return half * half;
+            }
+            else     
+            {
+                //If n is odd
+                return x * half * half;
+            }
+        }          
     }
     
 }
