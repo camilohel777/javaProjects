@@ -12,8 +12,7 @@ public class SubLinearExp {
     
     
      public static long exponentiation(long x, int n)
-    {
-        counter++;
+     {
         
         if( n == 0)
         { //Finished exponent
